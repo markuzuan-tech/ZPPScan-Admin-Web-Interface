@@ -1,0 +1,55 @@
+<div class="space-y-6">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 rounded-2xl shadow-sm border border-slate-200 gap-4">
+        <div>
+            <h3 class="font-bold text-sm text-charcoal">Event Management</h3>
+            <p class="text-xs text-slate-500">Create, edit, and generate unique QR codes for campus events.</p>
+        </div>
+        <button id="btn-open-event-modal" class="bg-maroon text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-maroon-dark transition flex items-center space-x-2">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span>Create Event</span>
+        </button>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs min-w-[600px]">
+            <thead>
+                <tr class="bg-slate-100 text-slate-600 font-bold border-b border-slate-200">
+                    <th class="p-4">Event Title</th>
+                    <th class="p-4">Date & Venue</th>
+                    <th class="p-4">QR Code Pass</th>
+                    <th class="p-4">Registrations</th>
+                    <th class="p-4 text-right">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-event-body" class="divide-y divide-slate-100"></tbody>
+        </table>
+    </div>
+
+    <!-- Create Event Modal -->
+    <div id="modal-event" class="fixed inset-0 bg-black/50 backdrop-blur-xs hidden items-center justify-center p-4 z-50">
+        <div class="bg-white w-full max-w-md p-6 rounded-3xl shadow-2xl space-y-4">
+            <div class="flex justify-between items-center">
+                <h3 class="font-bold text-sm text-charcoal">Create New Campus Event</h3>
+                <button id="btn-close-event-modal" class="text-slate-400 hover:text-charcoal"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <form id="form-create-event" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-slate-600 mb-1">Event Title</label>
+                    <input type="text" id="input-event-title" required placeholder="e.g. ICT & Digital Literacy Workshop" class="w-full border border-slate-200 p-2.5 rounded-xl outline-none focus:border-maroon">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-600 mb-1">Date & Time</label>
+                    <input type="text" id="input-event-date" required placeholder="e.g. April 02, 2026 • 9:00 AM" class="w-full border border-slate-200 p-2.5 rounded-xl outline-none focus:border-maroon">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-600 mb-1">Venue</label>
+                    <input type="text" id="input-event-venue" required placeholder="e.g. Computer Lab 3" class="w-full border border-slate-200 p-2.5 rounded-xl outline-none focus:border-maroon">
+                </div>
+                <div class="flex justify-end space-x-2 pt-2">
+                    <button type="button" id="btn-cancel-event-modal" class="px-4 py-2 bg-slate-100 rounded-xl font-bold text-xs text-slate-600">Cancel</button>
+                    <button type="submit" class="px-4 py-2 bg-maroon text-white rounded-xl font-bold text-xs hover:bg-maroon-dark">Save & Generate QR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

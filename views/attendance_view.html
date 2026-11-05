@@ -1,0 +1,26 @@
+<div class="space-y-6">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-white p-5 rounded-2xl shadow-sm border border-slate-200 gap-4">
+        <div>
+            <h3 class="font-bold text-sm text-charcoal">Real-Time Attendance Monitoring & Reports</h3>
+            <p class="text-xs text-slate-500">Live check-in logs and automated documentation reports.</p>
+        </div>
+        <button id="btn-export-csv" class="bg-charcoal text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-slate-800 transition flex items-center space-x-2">
+            <i data-lucide="download" class="w-4 h-4"></i>
+            <span>Export Report</span>
+        </button>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs min-w-[500px]">
+            <thead>
+                <tr class="bg-slate-100 text-slate-600 font-bold border-b border-slate-200">
+                    <th class="p-4">Participant Name</th>
+                    <th class="p-4">Event Name</th>
+                    <th class="p-4">Check-In Time</th>
+                    <th class="p-4">Status</th>
+                </tr>
+            </thead>
+            <tbody id="table-attendance-body" class="divide-y divide-slate-100"></tbody>
+        </table>
+    </div>
+</div>

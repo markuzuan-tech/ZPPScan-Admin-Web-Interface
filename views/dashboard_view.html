@@ -1,0 +1,45 @@
+<div class="space-y-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+            <span class="text-xs text-slate-400 font-semibold">Active Events</span>
+            <h3 id="stat-active-events" class="text-2xl font-extrabold text-charcoal mt-1">0</h3>
+            <span class="text-[10px] text-emerald-600 font-bold mt-2 inline-block">+1 scheduled today</span>
+        </div>
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+            <span class="text-xs text-slate-400 font-semibold">Total Registrations</span>
+            <h3 id="stat-total-reg" class="text-2xl font-extrabold text-charcoal mt-1">350</h3>
+            <span class="text-[10px] text-maroon font-bold mt-2 inline-block">92% capacity filled</span>
+        </div>
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+            <span class="text-xs text-slate-400 font-semibold">Checked-In Today</span>
+            <h3 id="stat-checked-in" class="text-2xl font-extrabold text-maroon mt-1">270</h3>
+            <span class="text-[10px] text-slate-500 font-bold mt-2 inline-block">Real-time sync active</span>
+        </div>
+        <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200">
+            <span class="text-xs text-slate-400 font-semibold">System Security</span>
+            <h3 class="text-xl font-extrabold text-emerald-600 mt-1">AES-256</h3>
+            <span class="text-[10px] text-slate-500 font-bold mt-2 inline-block">Encrypted & Secure</span>
+        </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+        <h3 class="font-bold text-sm text-charcoal mb-4">Quick Admin Actions</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <button data-target="events" class="nav-link p-4 bg-slate-50 rounded-xl hover:border-maroon border border-slate-200 text-left transition group">
+                <i data-lucide="plus-circle" class="w-6 h-6 text-maroon mb-2"></i>
+                <h4 class="font-bold text-xs text-charcoal">Create New Event</h4>
+                <p class="text-[10px] text-slate-500 mt-0.5">Generate event details & QR pass</p>
+            </button>
+            <button data-target="attendance" class="nav-link p-4 bg-slate-50 rounded-xl hover:border-maroon border border-slate-200 text-left transition group">
+                <i data-lucide="file-spreadsheet" class="w-6 h-6 text-maroon mb-2"></i>
+                <h4 class="font-bold text-xs text-charcoal">Download Reports</h4>
+                <p class="text-[10px] text-slate-500 mt-0.5">Export attendance logs to CSV/PDF</p>
+            </button>
+            <button data-target="users" class="nav-link p-4 bg-slate-50 rounded-xl hover:border-maroon border border-slate-200 text-left transition group">
+                <i data-lucide="shield" class="w-6 h-6 text-maroon mb-2"></i>
+                <h4 class="font-bold text-xs text-charcoal">Manage Roles</h4>
+                <p class="text-[10px] text-slate-500 mt-0.5">Assign participant & organizer permissions</p>
+            </button>
+        </div>
+    </div>
+</div>
